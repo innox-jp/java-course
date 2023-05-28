@@ -12,11 +12,13 @@ import java.util.Date;
 
 public class App {
     public static void main(String[] args) {
+        Bus bus = new Bus();
         System.out.println("Hello Remote World!");
     }
 
     void 跳瑜伽(Time 时间, Duration duration){
         时间.compareTo(new Date(2023,1,20));
+        Bus bus = new Bus();
 
     }
 }
