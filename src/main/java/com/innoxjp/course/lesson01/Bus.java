@@ -17,6 +17,9 @@ public class Bus {
     byte meiYouYong = 'j';
     Byte byte1 = '1';
     char title = 'a';
+    Integer abcInteger = 1;
+    Double aDouble = 2.2;
+    Float float1 = 2.3f;
     Character ctitle = 'a';
     double speedDouble = 1.0;
     Double dspeeDouble = 2.0;
