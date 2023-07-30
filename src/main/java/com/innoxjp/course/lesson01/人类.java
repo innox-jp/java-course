@@ -1,4 +1,7 @@
 package com.innoxjp.course.lesson01;
+
+import java.time.Year;
+
 class 物体{
     public Integer money;
     public static String TYPE = "物体";
@@ -28,7 +31,8 @@ public class 人类 extends 动物 {
         super.呼吸();
         //asdlfja;dlsf
         this.money = money - 100.00f;
-        
+        Year year = Year.of(2003);
+        year.isLeap();
 
     }
 
@@ -37,6 +41,7 @@ public class 人类 extends 动物 {
     public void 做瑜伽(){}
     public static void main(String[] 参数) {
 
+        人类 毛泽东 = new 人类();
         Integer 丽华的数 = new Integer("0");
         //Integer 小刘的数 = new Integer("小刘");
         String 丽华的名字 = "张丽华";
@@ -48,6 +53,11 @@ public class 人类 extends 动物 {
         System.out.println(小时.isEmpty());
         System.out.println(丽华的名字.charAt(2));
         System.out.println(王的名字.startsWith("张"));
+        Year year = Year.of(2003);
+        year.isLeap();
+
+        Long l = 5823405720435L;
+        System.out.println(Long.toString(l, 16).toUpperCase());
         
     }
 }
