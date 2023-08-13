@@ -8,7 +8,11 @@ package com.innoxjp.course.lesson01;
 import java.sql.Time;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Date;
+
+import com.innoxjp.course.能买房;
 
 public class App {
     public static void main(String[] args) {
@@ -24,25 +28,65 @@ public class App {
 
     }
 }
-class 房子{
+
+class 房子 {
 
 }
+
+class 老板 implements 能买房 {
+
+    @Override
+    public int 房子数量() {
+        return 100;
+    }
+
+    @Override
+    public boolean 能买房吗() {
+        return true;
+    }
+
+    @Override
+    public void 买房() {
+
+    }
+
+}
+
 class 帅哥 {
-    ArrayList<房子> list = new ArrayList<>();
+    ArrayList<房子> 房子s = new ArrayList<>();
     ArrayList<美女> 女朋友s = new ArrayList<>();
+    ArrayList<能买房> 朋友 = new ArrayList<>(Arrays.asList(new 老板(), new 美女()));
 
-    //房子[] 房子list = new 房子[100];
+    美女 老婆;
 
-    public ArrayList<房子> 买房子(){
-        list.add(new 房子());
-        return list;
+    // 房子[] 房子list = new 房子[100];
+
+    public ArrayList<房子> 买房子() {
+
+        房子s.add(new 房子());
+        return 房子s;
     }
 
-    public boolean 结婚(){
+    public boolean 能不能结婚(美女 o美女) {
         // 要判断有多少房子，房子大于50，返回true,否则false
-        if(list.size()>50) return true;
-        else return false;
+        if (房子s.size() > 50)
+            return true;
+        else
+            return false;
+
     }
+
+    public void 结婚(美女 o美女) {
+        女朋友s.sort(Comparator.comparing(美女::房子数量).reversed()
+                .thenComparing(美女::美貌).reversed()
+                .thenComparing(美女::存款).reversed());
+        if (能不能结婚(o美女)) {
+            女朋友s.clear();
+            老婆 = o美女;
+        }
+    }
+
+    
 }
 
 class 车 {
@@ -52,10 +96,12 @@ class 车 {
     String 右后轮;
 
 }
-class 学生{}
-class 班级{
-    动物[] 学生列表 = new 动物[100];
-    ArrayList<鱼类> 女生列表 =  new ArrayList<>();
 
+class 学生 {
+}
+
+class 班级 {
+    动物[] 学生列表 = new 动物[100];
+    ArrayList<鱼类> 女生列表 = new ArrayList<>();
 
 }
