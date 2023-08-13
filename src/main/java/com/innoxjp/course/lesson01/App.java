@@ -75,20 +75,58 @@ class 帅哥 {
             return false;
 
     }
+    public boolean 能不能结婚(富婆 o富婆) {
+        // 要判断有多少房子，房子大于50，返回true,否则false
+        if (房子s.size() > 50)
+            return true;
+        else
+            return false;
 
-    public void 结婚(美女 o美女) {
-        女朋友s.sort(Comparator.comparing(美女::房子数量).reversed()
-                .thenComparing(美女::美貌).reversed()
-                .thenComparing(美女::存款).reversed());
-        if (能不能结婚(o美女)) {
-            女朋友s.clear();
-            老婆 = o美女;
-        }
     }
 
+    // public void 结婚(美女 o美女) {
+        
+    //     女朋友s.sort(Comparator.comparing(美女::房子数量).reversed()
+    //             .thenComparing(美女::美貌).reversed()
+    //             .thenComparing(美女::存款).reversed());
+    //     if (能不能结婚(o美女)) {
+    //         女朋友s.clear();
+    //         老婆 = o美女;
+    //     }
+    // }
+    public void 结婚(富婆 o富婆) {
+        
+    }
+    public void 结婚(老富婆 o老富婆) {
+        
+    }
     
-}
 
+    public <T extends 美女 & I富婆>void 结婚(T 未婚妻){
+
+    }
+
+    public static void main(String[] args) {
+        帅哥 xiaoliu = new 帅哥();
+
+        富婆 lily = new 富婆();
+
+
+        老板 boss = new 老板();
+
+        xiaoliu.朋友.add(boss);
+
+        xiaoliu.买房子();
+        if(xiaoliu.能不能结婚(lily)){
+            xiaoliu.结婚(lily);
+        }
+
+        System.out.println("xiaoliu married lily!");
+    }
+}
+interface I富婆{
+    void 花钱();
+}
 class 车 {
     String 左前轮;
     String 左后轮;
@@ -100,6 +138,32 @@ class 车 {
 class 学生 {
 }
 
+class 富婆 implements 能买房 {
+    private int 房子数量;
+
+    public 富婆() {
+        this.房子数量 = 100;
+    }
+
+    @Override
+    public int 房子数量() {
+        return this.房子数量;
+    }
+
+    @Override
+    public boolean 能买房吗() {
+        return true;
+    }
+
+    @Override
+    public void 买房() {
+        System.out.println("买了一套房子");
+    }
+}
+
+class 老富婆 extends 富婆{
+
+}
 class 班级 {
     动物[] 学生列表 = new 动物[100];
     ArrayList<鱼类> 女生列表 = new ArrayList<>();
