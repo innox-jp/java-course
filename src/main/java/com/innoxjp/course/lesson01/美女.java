@@ -39,5 +39,11 @@ public class 美女 implements 能买房, java.io.Serializable{
     public void 买房() {
 
     }
+    public void setMoney(int i) {
+    }
+    public void setBeauty(int i) {
+    }
+    public void setDeposit(float f) {
+    }
 
 }
